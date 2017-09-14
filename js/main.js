@@ -11,6 +11,14 @@ $(function () {
     // 背景音乐播放
     var flag = true,
         audio = document.querySelector('audio');
+
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        audio.play();
+    }, false);
+    document.addEventListener('YixinJSBridgeReady', function() {
+        audio.play();
+    }, false);
+
     $('#musc').on('click', function () {
         if (flag) {
             $(this).removeClass('anim');
@@ -31,15 +39,15 @@ $(function () {
         var $usename = $('input[name="usename"]'),
             $phone = $('input[name="phone"]'),
             $profession = $('input[name="profession"]'),
-            $purpose = $('input[name="purpose"]');
-        if ( $usename.val() != '' &&  $phone.val() != '' && $profession.val() != '' && $purpose.val() != '' ) {
+            $selct = $("#sel");
+        if ( $usename.val() != '' &&  $phone.val() != '' && $profession.val() != '' && $selct.val() != '0' ) {
             $.ajax({
-                url:'',
+                url:'/main/2017/jilang2/index.php/Home/Index/submit',
                 data:{
-                    usename:$usename.val(),
-                    phone:$phone.val(),
-                    profession:$profession.val(),
-                    purpose:$purpose.val()
+                    name:$usename.val(),
+                    mobile:$phone.val(),
+                    major:$profession.val(),
+                    intentional_post:$selct.val()
                 },
                 type:'POST',
                 success:function (data) {
