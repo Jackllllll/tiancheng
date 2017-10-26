@@ -1,203 +1,455 @@
-
-html, body {
-    position: relative;
-    height: 100%;
-
-}
-body {
-    background-color: #212121;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color:#000;
-    margin: 0;
-    padding: 0;
-}
-input {-webkit-appearance:none; /*去除input默认样式*/}
 .swiper-container {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
+
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
-#musc {
-    position: fixed;
-    width: 0.89rem;
-    z-index: 100;
-    right: 0.22rem;
-    top: 0.24rem;
-
-}
-.anim{
-    animation: mymove 2s linear infinite;
-}
-@keyframes mymove
-{
-    from {transform:rotate(0deg);}
-    to {transform:rotate(360deg);}
+.icon {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 1.46rem;
+  width: 0.7rem;
+  height: 1.2rem;
+  background: url("../img/icon.png") center/100% no-repeat;
 }
 
+.anim {
+  position: fixed;
+  z-index: 99;
+  top: 0.3rem;
+  right: 0.4rem;
+  width: 0.43rem;
+  height: 0.43rem;
+  background: url("../img/mus.png") 0 0/200% no-repeat;
+}
 
 .page1 {
-    background: #212121 url('../img/page-1.png') center 0 no-repeat;
-}
-.page2 {
-    background: #212121 url('../img/page-2.png') center 0 no-repeat;
-}
-.page3 {
-    background: #212121 url('../img/page-3.png') center 0 no-repeat;
-}
-.page4 {
-    background: #212121 url('../img/page-4.png') center 0 no-repeat;
-}
-.page5 {
-    background: #212121 url('../img/page-5.png') center 0 no-repeat;
-}
-.page6 {
-    background: #212121 url('../img/page-6.png') center 0 no-repeat;
-}
-.page7 {
-    background: #212121 url('../img/page-7.png') center 0 no-repeat;
-}
-.page8 {
-    background: #212121 url('../img/page-8.png') center 0 no-repeat;
-}
-.page9 {
-    background: #212121 url('../img/page-9.png') center 0 no-repeat;
-}
-.swiper-slide{
-    -webkit-background-size: 100%;
-    background-size: 100%;
-}
-#form {
-    position: absolute;
-    top: 6.5rem;
-    left: 47%;
-    height: 19%;
-}
-#form .select {
-    width: 73%;
-    height: 0.64rem;
-    position: relative;
-}
-/*#form .select::after {
-    content: "▼";
-    display: inline;
-    font-size: 0.24rem;
-    position: absolute;
-    bottom: 0;
-    top: 20%;
-    right: -20%;
-    margin: auto;
-}*/
-#form #sel {
-    position: absolute;
-    width: 100%;
-    top: 5%;
-    bottom: 0;
-    margin: auto;
-    left: 0;
-    background-color: transparent;
-    border: none;
+  background: url("../img/bg1.jpg") 0 bottom/100% no-repeat;
 }
 
-#form input[type="text"] {
-    background: transparent;
-    display: block;
-    width: 100%;
-    height: 0.64rem;
-    line-height: 0;
+.page2 {
+  background: url("../img/bg2.jpg") 0 bottom/100% no-repeat;
 }
-#form #sel:active{
-    outline: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-appearance: none;
+
+.page1 .test {
+  position: absolute;
+  width: 6.49rem;
+  height: 3.66rem;
+  bottom: 6.05rem;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
-.page9 .submit {
-    width: 1.76rem;
-    height: 0.45rem;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 9.38rem;
+
+.page3 {
+  overflow: scroll;
 }
-#alert {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: none;
+
+.page4 {
+  background: url("../img/bg3.jpg") 0 bottom/100% no-repeat;
 }
-#alert .mo {
-    width: 100%;
-    height: 100%;
-    background: #000;
-    z-index: 99;
-    opacity: 0.6;
+
+.com {
+  position: absolute;
 }
-#alert .al-pic {
-    width: 5.3rem;
-    height: 3.52rem;
-    margin: auto;
-    position: absolute;
-    left: 0;
-    top:0;
-    right:0;
-    bottom:0;
-    opacity: 1;
-    z-index: 100;
+
+.ts {
+  position: absolute;
+  left: 5.14rem;
+  width: 0.85rem;
 }
-#alert .al-pic img{
-    width: 100%;
+
+.long {
+  width: 100%;
+  position: relative;
+  height: 85rem !important;
+  background: url("../img/long/bg.jpg") 0 0 no-repeat;
+  background-size: 100%;
 }
-#alert .close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 0.57rem;
-    height: 0.57rem;
-    background-color: transparent;
-    outline: none;
-    border: none;
+
+.long .part1 {
+  height: 13.56rem;
 }
-.pic-anim {
-    width: 0.5rem;
-    height: 0.46rem;
-    position: absolute;
-    bottom: 1.1rem;
-    margin: auto;
-    left: 0;
-    right:0;
-    animation: hint 1.4s linear infinite;
+
+.long .part2 {
+  height: 12.02rem;
 }
-@keyframes hint {
-    0% {
-        opacity: 0.4;
-        bottom: 1.1rem;
-    }
-    80% {
-        opacity: 1;
-        bottom: 1.0rem;
-    }
-    100% {
-        opacity: 0;
-    }
+
+.long .part3 {
+  height: 12.34rem;
+}
+
+.long .part4 {
+  height: 12rem;
+}
+
+.long .part5 {
+  height: 18.99rem;
+}
+
+.long .part6 {
+  height: 16.24rem;
+}
+
+.long .part1 {
+  position: relative;
+  background: url("../img/long/part1/bg.jpg") 0 0/100% 100% no-repeat;
+}
+
+.long .part2 {
+  position: relative;
+  background: url("../img/long/part2/bg.jpg") 0 0/100% 100% no-repeat;
+}
+
+.long .part3 {
+  position: relative;
+  background: url("../img/long/part3/bg.jpg") 0 0/100% 100% no-repeat;
+}
+
+.long .part4 {
+  position: relative;
+  background: url("../img/long/part4/bg.jpg") 0 0/100% 100% no-repeat;
+}
+
+.long .part5 {
+  position: relative;
+  background: url("../img/long/part5/bg.jpg") 0 0/100% 100% no-repeat;
+}
+
+.long .part6 {
+  position: relative;
+  background: url("../img/long/part6/bg.jpg") 0 0/100% 100% no-repeat;
+}
+
+.long .part1 .test {
+  top: 2.4rem;
+  width: 6.03rem;
+  left: 0.54rem;
+}
+
+.long .part1 .phone {
+  top: 4.88rem;
+  width: 4.23rem;
+  left: 2.56rem;
+}
+
+.long .part1 .test1 {
+  top: 7.2rem;
+  width: 2.2rem;
+  left: 0.66rem;
+}
+
+.long .part1 .btn {
+  top: 11.96rem;
+  width: 4.42rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.long .part1 .ts {
+  top: 12.17rem;
+}
+
+.long .part2 .test {
+  top: 5.78rem;
+  width: 1.51rem;
+  left: 1.48rem;
+}
+
+.long .part2 .btn {
+  top: 10.46rem;
+  width: 4.42rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.long .part2 .ts {
+  top: 10.68rem;
+}
+
+.long .part3 .icon1 {
+  background: url("../img/long/part3/icon1.png") 0 0/100% no-repeat;
+}
+
+.long .part3 .icon2 {
+  background: url("../img/long/part3/icon2.png") 0 0/100% no-repeat;
+}
+
+.long .part3 .icon3 {
+  background: url("../img/long/part3/icon3.png") 0 0/100% no-repeat;
+}
+
+.long .part3 .icon4 {
+  background: url("../img/long/part3/icon4.png") 0 0/100% no-repeat;
+}
+
+.long .part3 .icon5 {
+  background: url("../img/long/part3/icon5.png") 0 0/100% no-repeat;
+}
+
+.long .part3 .con {
+  width: 2.32rem;
+  height: 1.11rem;
+}
+
+.long .part3 .active {
+  background-position-y: -1.11rem;
+}
+
+.long .part3 .icon2, .long .part3 .icon5 {
+  top: 3.96rem;
+}
+
+.long .part3 .icon3, .long .part3 .icon4 {
+  top: 6.62rem;
+}
+
+.long .part3 .icon1 {
+  top: 2.48rem;
+  left: 2.84rem;
+}
+
+.long .part3 .icon2 {
+  left: 5.1rem;
+}
+
+.long .part3 .icon5 {
+  left: 0.56rem;
+}
+
+.long .part3 .icon3 {
+  left: 4.45rem;
+}
+
+.long .part3 .icon4 {
+  left: 1.37rem;
+}
+
+.long .part3 .btn {
+  top: 10.56rem;
+  width: 4.42rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.long .part3 .ts {
+  top: 10.78rem;
+}
+
+.long .part3 .text {
+  top: 8.15rem;
+  width: 4.89rem;
+  height: 1.74rem;
+  left: 0.86rem;
+  background: url("../img/long/part3/text.png") 0 0/100% no-repeat;
+}
+
+.long .part4 .icon1 {
+  background: url("../img/long/part4/img.png") calc(-1.29rem*(1 - 1)) 0 no-repeat;
+}
+
+.long .part4 .icon2 {
+  background: url("../img/long/part4/img.png") calc(-1.29rem*(2 - 1)) 0 no-repeat;
+}
+
+.long .part4 .icon3 {
+  background: url("../img/long/part4/img.png") calc(-1.29rem*(3 - 1)) 0 no-repeat;
+}
+
+.long .part4 .icon4 {
+  background: url("../img/long/part4/img.png") calc(-1.29rem*(4 - 1)) 0 no-repeat;
+}
+
+.long .part4 .iicon1 {
+  background: url("../img/long/part4/img.png") calc(-2.86rem*(1 - 1)) -1.3rem no-repeat;
+}
+
+.long .part4 .iicon2 {
+  background: url("../img/long/part4/img.png") calc(-2.86rem*(2 - 1)) -1.3rem no-repeat;
+}
+
+.long .part4 .iicon3 {
+  background: url("../img/long/part4/img.png") calc(-2.86rem*(3 - 1)) -1.3rem no-repeat;
+}
+
+.long .part4 .iicon4 {
+  background: url("../img/long/part4/img.png") calc(-2.86rem*(4 - 1)) -1.3rem no-repeat;
+}
+
+.long .part4 .t-com {
+  display: none;
+}
+
+.long .part4 .ii-com {
+  display: none;
+}
+
+.long .part4 .con {
+  width: 1.29rem;
+  height: 1.29rem;
+  background-size: 11.41rem 3.03rem;
+  z-index: 5;
+}
+
+.long .part4 .con1 {
+  width: 2.83rem;
+  height: 1.73rem;
+  background-size: 11.41rem 3.03rem;
+  z-index: 4;
+}
+
+.long .part4 .text-acitve {
+  display: block;
+}
+
+.long .part4 .ii-active {
+  display: block;
+}
+
+.long .part4 .icon1, .long .part4 .icon4 {
+  top: 5.14rem;
+}
+
+.long .part4 .icon2, .long .part4 .icon3 {
+  top: 6.29rem;
+}
+
+.long .part4 .icon1 {
+  left: 1.14rem;
+}
+
+.long .part4 .icon4 {
+  left: 5.43rem;
+}
+
+.long .part4 .icon2 {
+  left: 2.47rem;
+}
+
+.long .part4 .icon3 {
+  left: 4.24rem;
+}
+
+.long .part4 .iicon1, .long .part4 .iicon4 {
+  top: 4.91rem;
+}
+
+.long .part4 .iicon4 {
+  left: 4.12rem;
+}
+
+.long .part4 .iicon1 {
+  left: 0.89rem;
+}
+
+.long .part4 .iicon2, .long .part4 .iicon3 {
+  top: 6.07rem;
+}
+
+.long .part4 .iicon2 {
+  left: 1.16rem;
+}
+
+.long .part4 .iicon3 {
+  left: 4.06rem;
+}
+
+.long .part4 .text1 {
+  top: 7.44rem;
+  left: 0.97rem;
+  width: 5.87rem;
+}
+
+.long .part4 .text2 {
+  top: 7.95rem;
+  left: 1.53rem;
+  width: 4.7rem;
+}
+
+.long .part4 .text3 {
+  top: 7.95rem;
+  left: 1.53rem;
+  width: 4.7rem;
+}
+
+.long .part4 .text4 {
+  top: 7.75rem;
+  left: 1.83rem;
+  width: 4.4rem;
+}
+
+.long .part4 .btn {
+  top: 10.32rem;
+  width: 4.42rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.long .part4 .ts {
+  top: 10.54rem;
+}
+
+.long .part5 .con1, .long .part5 .con2, .long .part5 .con3 {
+  width: 5.16rem;
+  left: 0.73rem;
+}
+
+.long .part5 .con1 {
+  top: 2.54rem;
+}
+
+.long .part5 .con2 {
+  top: 6.83rem;
+}
+
+.long .part5 .con3 {
+  top: 13.16rem;
+}
+
+.long .part5 .btn {
+  top: 17.36rem;
+  width: 4.42rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.long .part5 .ts {
+  top: 17.58rem;
+}
+
+.long .part6 .btn {
+  top: 12.79rem;
+  width: 4.42rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.long .part6 .ts {
+  top: 13.01rem;
 }
