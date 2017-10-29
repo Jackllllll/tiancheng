@@ -11,7 +11,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex;
+  display: block;
+  height: 100%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -20,6 +21,15 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  position: relative;
+  height: 100%;
 }
 
 .icon {
@@ -40,7 +50,11 @@
   right: 0.4rem;
   width: 0.43rem;
   height: 0.43rem;
-  background: url("../img/mus.png") 0 0/200% no-repeat;
+  background: url("../img/mus.png") -0.425rem 0/200% no-repeat;
+}
+
+.mus-play {
+  background-position-X: 0;
 }
 
 .page1 {
@@ -61,12 +75,12 @@
   right: 0;
 }
 
-.page3 {
-  overflow: scroll;
-}
-
 .page4 {
   background: url("../img/bg3.jpg") 0 bottom/100% no-repeat;
+}
+
+.page5 {
+  background: url("../img/bg4.jpg") 0 bottom/100% no-repeat;
 }
 
 .com {
@@ -79,10 +93,13 @@
   width: 0.85rem;
 }
 
+.box {
+  -webkit-overflow-scrolling: touch;
+}
+
 .long {
   width: 100%;
   position: relative;
-  height: 85rem !important;
   background: url("../img/long/bg.jpg") 0 0 no-repeat;
   background-size: 100%;
 }
@@ -141,10 +158,40 @@
   background: url("../img/long/part6/bg.jpg") 0 0/100% 100% no-repeat;
 }
 
+.long .opacity {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: #fff;
+  opacity: 0.6;
+}
+
+.long .op-init1 {
+  opacity: 0.6;
+}
+
+.long .op-init2 {
+  opacity: 0.3;
+  transition: opacity 1s linear;
+}
+
+.long .op-done {
+  opacity: 1;
+}
+
+.long .part1 .plane {
+  top: 1.85rem;
+  width: 1.87rem;
+  left: 0.74rem;
+}
+
 .long .part1 .test {
   top: 2.4rem;
   width: 6.03rem;
   left: 0.54rem;
+  animation-delay: 1s;
 }
 
 .long .part1 .phone {
@@ -154,9 +201,43 @@
 }
 
 .long .part1 .test1 {
-  top: 7.2rem;
-  width: 2.2rem;
-  left: 0.66rem;
+  left: 1.03rem;
+  top: 7.72rem;
+}
+
+.long .part1 .test1 div {
+  width: 1.51rem;
+  height: 0.5rem;
+}
+
+.long .part1 .test1 div:nth-child(1) {
+  position: relative;
+  background: url("../img/long/part1/par1-4.png") 0 calc(-0.5rem*(1 - 1))/100% no-repeat;
+  animation-delay: calc(1s + 1*0.1s);
+}
+
+.long .part1 .test1 div:nth-child(2) {
+  position: relative;
+  background: url("../img/long/part1/par1-4.png") 0 calc(-0.5rem*(2 - 1))/100% no-repeat;
+  animation-delay: calc(1s + 2*0.1s);
+}
+
+.long .part1 .test1 div:nth-child(3) {
+  position: relative;
+  background: url("../img/long/part1/par1-4.png") 0 calc(-0.5rem*(3 - 1))/100% no-repeat;
+  animation-delay: calc(1s + 3*0.1s);
+}
+
+.long .part1 .test1 div:nth-child(4) {
+  position: relative;
+  background: url("../img/long/part1/par1-4.png") 0 calc(-0.5rem*(4 - 1))/100% no-repeat;
+  animation-delay: calc(1s + 4*0.1s);
+}
+
+.long .part1 .test1 div:nth-child(5) {
+  position: relative;
+  background: url("../img/long/part1/par1-4.png") 0 calc(-0.5rem*(5 - 1))/100% no-repeat;
+  animation-delay: calc(1s + 5*0.1s);
 }
 
 .long .part1 .btn {
@@ -165,6 +246,7 @@
   left: 0;
   right: 0;
   margin: auto;
+  animation-delay: 2s;
 }
 
 .long .part1 .ts {
@@ -172,9 +254,43 @@
 }
 
 .long .part2 .test {
-  top: 5.78rem;
-  width: 1.51rem;
   left: 1.48rem;
+  top: 5.78rem;
+}
+
+.long .part2 .test div {
+  width: 1.51rem;
+  height: 0.5rem;
+}
+
+.long .part2 .test div:nth-child(1) {
+  position: relative;
+  background: url("../img/long/part2/part2-1.png") 0 calc(-0.5rem*(1 - 1))/100% no-repeat;
+  animation-delay: calc(0.5s + 1*0.1s);
+}
+
+.long .part2 .test div:nth-child(2) {
+  position: relative;
+  background: url("../img/long/part2/part2-1.png") 0 calc(-0.5rem*(2 - 1))/100% no-repeat;
+  animation-delay: calc(0.5s + 2*0.1s);
+}
+
+.long .part2 .test div:nth-child(3) {
+  position: relative;
+  background: url("../img/long/part2/part2-1.png") 0 calc(-0.5rem*(3 - 1))/100% no-repeat;
+  animation-delay: calc(0.5s + 3*0.1s);
+}
+
+.long .part2 .test div:nth-child(4) {
+  position: relative;
+  background: url("../img/long/part2/part2-1.png") 0 calc(-0.5rem*(4 - 1))/100% no-repeat;
+  animation-delay: calc(0.5s + 4*0.1s);
+}
+
+.long .part2 .test div:nth-child(5) {
+  position: relative;
+  background: url("../img/long/part2/part2-1.png") 0 calc(-0.5rem*(5 - 1))/100% no-repeat;
+  animation-delay: calc(0.5s + 5*0.1s);
 }
 
 .long .part2 .btn {
@@ -183,6 +299,7 @@
   left: 0;
   right: 0;
   margin: auto;
+  animation-delay: 2s;
 }
 
 .long .part2 .ts {
@@ -253,6 +370,7 @@
   left: 0;
   right: 0;
   margin: auto;
+  animation-delay: 2s;
 }
 
 .long .part3 .ts {
@@ -407,6 +525,7 @@
   left: 0;
   right: 0;
   margin: auto;
+  animation-delay: 2s;
 }
 
 .long .part4 .ts {
@@ -424,10 +543,12 @@
 
 .long .part5 .con2 {
   top: 6.83rem;
+  animation-delay: 1s;
 }
 
 .long .part5 .con3 {
   top: 13.16rem;
+  animation-delay: 1.5s;
 }
 
 .long .part5 .btn {
@@ -436,6 +557,7 @@
   left: 0;
   right: 0;
   margin: auto;
+  animation-delay: 2s;
 }
 
 .long .part5 .ts {
@@ -448,8 +570,166 @@
   left: 0;
   right: 0;
   margin: auto;
+  animation-delay: 2s;
 }
 
 .long .part6 .ts {
   top: 13.01rem;
+}
+
+.long .second {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+.long .second .two:nth-child(1) {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: url("../img/two/two1.jpg") 0 bottom/100% no-repeat;
+}
+
+.long .second .two:nth-child(1) .c-btn {
+  position: absolute;
+  right: 0.47rem;
+  bottom: 11.34rem;
+  width: 0.43rem;
+}
+
+.long .second .two:nth-child(3) a {
+  position: absolute;
+  display: block;
+  width: 4.49rem;
+  height: 1.46rem;
+  bottom: 7.85rem;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.long .second .two:nth-child(2) {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: url("../img/two/two2.jpg") 0 bottom/100% no-repeat;
+}
+
+.long .second .two:nth-child(2) .c-btn {
+  position: absolute;
+  right: 0.47rem;
+  bottom: 11.34rem;
+  width: 0.43rem;
+}
+
+.long .second .two:nth-child(3) a {
+  position: absolute;
+  display: block;
+  width: 4.49rem;
+  height: 1.46rem;
+  bottom: 7.85rem;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.long .second .two:nth-child(3) {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: url("../img/two/two3.jpg") 0 bottom/100% no-repeat;
+}
+
+.long .second .two:nth-child(3) .c-btn {
+  position: absolute;
+  right: 0.47rem;
+  bottom: 11.34rem;
+  width: 0.43rem;
+}
+
+.long .second .two:nth-child(3) a {
+  position: absolute;
+  display: block;
+  width: 4.49rem;
+  height: 1.46rem;
+  bottom: 7.85rem;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.long .second .two:nth-child(4) {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: url("../img/two/two4.jpg") 0 bottom/100% no-repeat;
+}
+
+.long .second .two:nth-child(4) .c-btn {
+  position: absolute;
+  right: 0.47rem;
+  bottom: 11.34rem;
+  width: 0.43rem;
+}
+
+.long .second .two:nth-child(3) a {
+  position: absolute;
+  display: block;
+  width: 4.49rem;
+  height: 1.46rem;
+  bottom: 7.85rem;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.long .second .two:nth-child(5) {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: url("../img/two/two5.jpg") 0 bottom/100% no-repeat;
+}
+
+.long .second .two:nth-child(5) .c-btn {
+  position: absolute;
+  right: 0.47rem;
+  bottom: 11.34rem;
+  width: 0.43rem;
+}
+
+.long .second .two:nth-child(3) a {
+  position: absolute;
+  display: block;
+  width: 4.49rem;
+  height: 1.46rem;
+  bottom: 7.85rem;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.long .second .two:nth-child(6) {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: url("../img/two/two6.jpg") 0 bottom/100% no-repeat;
+}
+
+.long .second .two:nth-child(6) .c-btn {
+  position: absolute;
+  right: 0.47rem;
+  bottom: 11.34rem;
+  width: 0.43rem;
+}
+
+.long .second .two:nth-child(3) a {
+  position: absolute;
+  display: block;
+  width: 4.49rem;
+  height: 1.46rem;
+  bottom: 7.85rem;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
